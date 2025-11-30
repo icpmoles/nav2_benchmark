@@ -51,7 +51,7 @@ void prepareAndRunBenchmark(
   int batch_size = 300;
   int time_steps = 12;
   unsigned int path_points = 50u;
-  int iteration_count = 2;
+  int iteration_count = 1;
   double lookahead_distance = 10.0;
 
   TestCostmapSettings costmap_settings{};
