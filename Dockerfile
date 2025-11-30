@@ -14,24 +14,21 @@ RUN apt update && apt upgrade -y \
     && rosdep update \
     && rosdep install -y --ignore-src --from-paths src -r
 
+WORKDIR /root/nav2_ws/
+
+RUN . /opt/ros/jazzy/setup.sh && \
+        colcon build --parallel-workers $(nproc --ignore 1)  --packages-up-to nav2_mppi_controller  --packages-skip nav2_mppi_controller 
 
 WORKDIR /root/nav2_ws/src/navigation2/
 
 RUN rm -rf nav2_mppi_controller
 
-COPY nav2_mppi_controller nav2_mppi_controller
-
+COPY ./nav2_mppi_controller nav2_mppi_controller
 
 WORKDIR /root/nav2_ws/
 
-RUN . /opt/ros/jazzy/setup.sh && \
-        colcon build --parallel-workers $(nproc --ignore 1)  --packages-up-to nav2_mppi_controller --cmake-args -DBUILD_TESTING=ON    
-
-#RUN ./root/nav2_ws/install/local_setup.bash    
-## no touch 
-
-# colcon test --parallel-workers $(nproc --ignore 1)  --packages-select nav2_mppi_controller
-# colcon test-result 
+RUN . /opt/ros/jazzy/setup.sh && . /root/nav2_ws/install/local_setup.sh && \
+        colcon build --parallel-workers $(nproc --ignore 1)  --packages-select nav2_mppi_controller  --cmake-args -DBUILD_TESTING=ON  
 
 
 COPY entrypoint.sh /root/nav2_ws/
