@@ -49,7 +49,7 @@ void prepareAndRunBenchmark(
   bool consider_footprint, std::string motion_model,
   std::vector<std::string> critics, benchmark::State & state)
 {
-  int batch_size = 300;
+  int batch_size = 1000;
   int time_steps = 12;
   unsigned int path_points = 50u;
   int iteration_count = 2;
@@ -107,7 +107,7 @@ static void BM_DiffDrivePointFootprint(benchmark::State & state)
 
 static void BM_DiffDrive(benchmark::State & state)
 {
-  bool consider_footprint = true;
+  bool consider_footprint = false;
   std::string motion_model = "DiffDrive";
   std::vector<std::string> critics = {{"GoalCritic"}, {"GoalAngleCritic"}, {"ObstaclesCritic"},
     {"PathAngleCritic"}, {"PathFollowCritic"}, {"PreferForwardCritic"}};

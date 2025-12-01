@@ -17,7 +17,8 @@ RUN apt update && apt upgrade -y \
 WORKDIR /root/nav2_ws/
 
 RUN . /opt/ros/jazzy/setup.sh && \
-        colcon build --parallel-workers $(nproc --ignore 1)  --packages-up-to nav2_mppi_controller  --packages-skip nav2_mppi_controller 
+        colcon build --parallel-workers $(nproc --ignore 1)  --packages-up-to nav2_mppi_controller    --cmake-args -DCMAKE_BUILD_TYPE=Release
+        #--packages-skip nav2_mppi_controller 
 
 WORKDIR /root/nav2_ws/src/navigation2/
 
@@ -27,12 +28,20 @@ COPY ./nav2_mppi_controller nav2_mppi_controller
 
 WORKDIR /root/nav2_ws/
 
-RUN . /opt/ros/jazzy/setup.sh && . /root/nav2_ws/install/local_setup.sh && \
-        colcon build --parallel-workers $(nproc --ignore 1)  --packages-select nav2_mppi_controller  --cmake-args -DBUILD_TESTING=ON  
+RUN . /root/nav2_ws/install/setup.sh && \
+        colcon build --parallel-workers $(nproc --ignore 1)  --packages-select nav2_mppi_controller  --cmake-args  -DBUILD_TESTING=ON  -DCMAKE_BUILD_TYPE=Release
 
+# -DBUILD_TESTING=ON
 
-COPY entrypoint.sh /root/nav2_ws/
+COPY *.sh /root/nav2_ws/
 
-RUN chmod +x entrypoint.sh
+RUN chmod +x *.sh
 
-ENTRYPOINT ["/bin/bash", "/root/nav2_ws/entrypoint.sh"]
+ENV BASH_ENV=/root/nav2_ws/install/setup.sh
+
+RUN chmod +x  /root/nav2_ws/install/setup.sh
+RUN /root/nav2_ws/install/setup.sh
+
+#CMD ["bash"]
+
+ENTRYPOINT ["/bin/bash", "-c", "/root/nav2_ws/entrypoint.sh"]

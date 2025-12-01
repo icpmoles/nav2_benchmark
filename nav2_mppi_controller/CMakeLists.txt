@@ -116,8 +116,10 @@ if(BUILD_TESTING)
   set(ament_cmake_copyright_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
   add_subdirectory(test)
-  add_subdirectory(benchmark)
+  #add_subdirectory(benchmark)
 endif()
+
+add_subdirectory(benchmark)
 
 ament_export_libraries(${libraries})
 ament_export_dependencies(${dependencies_pkgs})
