@@ -33,7 +33,7 @@ RUN . /root/nav2_ws/install/setup.sh && \
 
 # -DBUILD_TESTING=ON
 
-COPY *.sh /root/nav2_ws/
+COPY scripts/*.sh /root/nav2_ws/
 
 RUN chmod +x *.sh
 
