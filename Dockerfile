@@ -4,7 +4,8 @@ FROM ros:${ROS_DISTRO}-ros-core
 RUN apt update \
     && DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends --no-install-suggests \
   ros-dev-tools \
-  wget
+  wget \
+  jq
 
 WORKDIR /root/nav2_ws
 RUN mkdir -p ~/nav2_ws/src

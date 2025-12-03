@@ -12,5 +12,5 @@ Edit the `docker-compose.yaml` for different CPU affinity options
 Run with:
 
 ```
-sudo ./test_matrix.sh $USER
+sudo ./test_matrix.sh $USER status
 ```

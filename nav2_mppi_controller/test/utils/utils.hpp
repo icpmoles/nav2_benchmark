@@ -76,11 +76,12 @@ void sendTf(
  */
 void printMap(const nav2_costmap_2d::Costmap2D & costmap)
 {
+  fprintf(stderr,"P2\n%i %i\n10\n", costmap.getSizeInCellsX(), costmap.getSizeInCellsY());
   for (unsigned int i = 0; i < costmap.getSizeInCellsY(); i++) {
     for (unsigned int j = 0; j < costmap.getSizeInCellsX(); j++) {
-      printf("%4d", static_cast<int>(costmap.getCost(j, i)));
+      fprintf(stderr,"%d ", static_cast<int>(costmap.getCost(j, i))); // PGM standard
     }
-    printf("\n\n");
+    fprintf(stderr,"\n\n");
   }
 }
 
@@ -155,7 +156,7 @@ void printInfo(
     ss << str << " ";
   }
 
-  std::cout <<  //
+  std::cerr <<  //
     "\n\n--------------------OPTIMIZER OPTIONS-----------------------------\n" <<
     "Critics: " << ss.str() << "\n" \
     "Motion model: " << os.motion_model << "\n"
