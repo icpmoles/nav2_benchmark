@@ -49,11 +49,11 @@ void prepareAndRunBenchmark(
   bool consider_footprint, std::string motion_model,
   std::vector<std::string> critics, benchmark::State & state)
 {
-  int batch_size = 2000; // nav2_params.yaml Line 147
-  int time_steps = 56;   // Line 145
-  unsigned int path_points = 200u;  // n° of poses in the dummy path
-  int iteration_count = 1; // Line 158
-  double lookahead_distance = 10.0; 
+  int batch_size = 2000;
+  int time_steps = 56;
+  unsigned int path_points = 50u;
+  int iteration_count = 2;
+  double lookahead_distance = 10.0;
 
   TestCostmapSettings costmap_settings{};
   auto costmap_ros = getDummyCostmapRos(costmap_settings);
@@ -66,36 +66,16 @@ void prepareAndRunBenchmark(
   TestOptimizerSettings optimizer_settings{batch_size, time_steps, iteration_count,
     lookahead_distance, motion_model, consider_footprint};
 
-  unsigned int offset = 40;  // in cells
-  unsigned int obstacle_size = 10; // in cells
+  unsigned int offset = 4;
+  unsigned int obstacle_size = offset * 2;
 
   unsigned char obstacle_cost = 250;
 
   auto [obst_x, obst_y] = costmap_settings.getCenterIJ();
 
-  // obst_x = obst_x - offset;
-  // obst_y = obst_y - offset;
-  addObstacle(costmap, obst_x - offset, obst_y - offset, obstacle_size, obstacle_cost);
-  addObstacle(costmap, obst_x - offset, obst_y, obstacle_size, obstacle_cost);
-  addObstacle(costmap, obst_x + offset, obst_y, obstacle_size, obstacle_cost);
-
-  addObstacle(costmap, obst_x - offset, obst_y + offset, obstacle_size, obstacle_cost);
-
-  addObstacle(costmap, obst_x + offset, obst_y - offset, obstacle_size, obstacle_cost);
-
-  addObstacle(costmap, obst_x + offset, obst_y + offset, obstacle_size, obstacle_cost);
-  addObstacle(costmap, obst_x, obst_y - offset, obstacle_size, obstacle_cost);
-  addObstacle(costmap, obst_x, obst_y + offset, obstacle_size, obstacle_cost);
-
-  // addObstacle(costmap, obst_x + offset, obst_y - offset, obstacle_size, obstacle_cost);
-  // addObstacle(costmap, obst_x + offset, obst_y + offset, obstacle_size, obstacle_cost);  
-
-  
-  nav2_costmap_2d::Costmap2D costmap2d(
-    costmap->getSizeInCellsX(), costmap->getSizeInCellsY(), costmap->getResolution(),
-    costmap->getOriginX(), costmap->getOriginY(), costmap->getDefaultValue());
-  costmap2d=*costmap;
-  //printMap(costmap2d);
+  obst_x = obst_x - offset;
+  obst_y = obst_y - offset;
+  addObstacle(costmap, {obst_x, obst_y, obstacle_size, obstacle_cost});
 
   printInfo(optimizer_settings, path_settings, critics);
   

@@ -5,7 +5,8 @@ RUN apt update \
     && DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends --no-install-suggests \
   ros-dev-tools \
   wget \
-  jq
+  jq \
+  gdb
 
 WORKDIR /root/nav2_ws
 RUN mkdir -p ~/nav2_ws/src
@@ -18,7 +19,7 @@ RUN apt update && apt upgrade -y \
 WORKDIR /root/nav2_ws/
 
 RUN . /opt/ros/jazzy/setup.sh && \
-        colcon build --parallel-workers $(nproc --ignore 1)  --packages-up-to nav2_mppi_controller    --cmake-args -DCMAKE_BUILD_TYPE=Release
+        colcon build --parallel-workers $(nproc --ignore 1)  --packages-up-to nav2_mppi_controller    --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo
         #--packages-skip nav2_mppi_controller 
 
 WORKDIR /root/nav2_ws/src/navigation2/
@@ -30,7 +31,7 @@ COPY ./nav2_mppi_controller nav2_mppi_controller
 WORKDIR /root/nav2_ws/
 
 RUN . /root/nav2_ws/install/setup.sh && \
-        colcon build --parallel-workers $(nproc --ignore 1)  --packages-select nav2_mppi_controller  --cmake-args  -DBUILD_TESTING=ON  -DCMAKE_BUILD_TYPE=Release
+        colcon build --parallel-workers $(nproc --ignore 1)  --packages-select nav2_mppi_controller  --cmake-args  -DBUILD_TESTING=ON  -DCMAKE_BUILD_TYPE=RelWithDebInfo
 
 # -DBUILD_TESTING=ON
 
