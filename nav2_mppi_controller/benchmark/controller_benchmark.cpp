@@ -65,7 +65,7 @@ void prepareAndRunBenchmark(
   TestOptimizerSettings optimizer_settings{batch_size, time_steps, iteration_count,
     lookahead_distance, motion_model, consider_footprint};
 
-  unsigned int offset = 4;
+  unsigned int offset = 8; // the offset is in "cells", if we double the resolution we need to account for it
   unsigned int obstacle_size = offset * 2;
 
   unsigned char obstacle_cost = 250;
@@ -139,100 +139,100 @@ static void BM_DiffDrive(benchmark::State & state)
 }
 
 
-// static void BM_Omni(benchmark::State & state)
+// // static void BM_Omni(benchmark::State & state)
+// // {
+// //   bool consider_footprint = true;
+// //   std::string motion_model = "Omni";
+// //   std::vector<std::string> critics = {{"GoalCritic"}, {"GoalAngleCritic"}, {"ObstaclesCritic"},
+// //     {"TwirlingCritic"}, {"PathFollowCritic"}, {"PreferForwardCritic"}};
+
+// //   prepareAndRunBenchmark(consider_footprint, motion_model, critics, state);
+// // }
+
+// // static void BM_Ackermann(benchmark::State & state)
+// // {
+// //   bool consider_footprint = true;
+// //   std::string motion_model = "Ackermann";
+// //   std::vector<std::string> critics = {{"GoalCritic"}, {"GoalAngleCritic"}, {"ObstaclesCritic"},
+// //     {"PathAngleCritic"}, {"PathFollowCritic"}, {"PreferForwardCritic"}};
+
+// //   prepareAndRunBenchmark(consider_footprint, motion_model, critics, state);
+// // }
+
+// static void BM_GoalCritic(benchmark::State & state)
 // {
 //   bool consider_footprint = true;
-//   std::string motion_model = "Omni";
-//   std::vector<std::string> critics = {{"GoalCritic"}, {"GoalAngleCritic"}, {"ObstaclesCritic"},
-//     {"TwirlingCritic"}, {"PathFollowCritic"}, {"PreferForwardCritic"}};
+//   std::string motion_model = "DiffDrive";
+//   std::vector<std::string> critics = {{"GoalCritic"}};
 
 //   prepareAndRunBenchmark(consider_footprint, motion_model, critics, state);
 // }
 
-// static void BM_Ackermann(benchmark::State & state)
+// static void BM_GoalAngleCritic(benchmark::State & state)
 // {
 //   bool consider_footprint = true;
-//   std::string motion_model = "Ackermann";
-//   std::vector<std::string> critics = {{"GoalCritic"}, {"GoalAngleCritic"}, {"ObstaclesCritic"},
-//     {"PathAngleCritic"}, {"PathFollowCritic"}, {"PreferForwardCritic"}};
+//   std::string motion_model = "DiffDrive";
+//   std::vector<std::string> critics = {{"GoalAngleCritic"}};
 
 //   prepareAndRunBenchmark(consider_footprint, motion_model, critics, state);
 // }
 
-static void BM_GoalCritic(benchmark::State & state)
-{
-  bool consider_footprint = true;
-  std::string motion_model = "DiffDrive";
-  std::vector<std::string> critics = {{"GoalCritic"}};
+// static void BM_ObstaclesCritic(benchmark::State & state)
+// {
+//   bool consider_footprint = true;
+//   std::string motion_model = "DiffDrive";
+//   std::vector<std::string> critics = {{"ObstaclesCritic"}};
 
-  prepareAndRunBenchmark(consider_footprint, motion_model, critics, state);
-}
+//   prepareAndRunBenchmark(consider_footprint, motion_model, critics, state);
+// }
 
-static void BM_GoalAngleCritic(benchmark::State & state)
-{
-  bool consider_footprint = true;
-  std::string motion_model = "DiffDrive";
-  std::vector<std::string> critics = {{"GoalAngleCritic"}};
+// static void BM_ObstaclesCriticPointFootprint(benchmark::State & state)
+// {
+//   bool consider_footprint = false;
+//   std::string motion_model = "DiffDrive";
+//   std::vector<std::string> critics = {{"ObstaclesCritic"}};
 
-  prepareAndRunBenchmark(consider_footprint, motion_model, critics, state);
-}
+//   prepareAndRunBenchmark(consider_footprint, motion_model, critics, state);
+// }
 
-static void BM_ObstaclesCritic(benchmark::State & state)
-{
-  bool consider_footprint = true;
-  std::string motion_model = "DiffDrive";
-  std::vector<std::string> critics = {{"ObstaclesCritic"}};
+// static void BM_TwilringCritic(benchmark::State & state)
+// {
+//   bool consider_footprint = true;
+//   std::string motion_model = "DiffDrive";
+//   std::vector<std::string> critics = {{"TwirlingCritic"}};
 
-  prepareAndRunBenchmark(consider_footprint, motion_model, critics, state);
-}
+//   prepareAndRunBenchmark(consider_footprint, motion_model, critics, state);
+// }
 
-static void BM_ObstaclesCriticPointFootprint(benchmark::State & state)
-{
-  bool consider_footprint = false;
-  std::string motion_model = "DiffDrive";
-  std::vector<std::string> critics = {{"ObstaclesCritic"}};
+// static void BM_PathFollowCritic(benchmark::State & state)
+// {
+//   bool consider_footprint = true;
+//   std::string motion_model = "DiffDrive";
+//   std::vector<std::string> critics = {{"PathFollowCritic"}};
 
-  prepareAndRunBenchmark(consider_footprint, motion_model, critics, state);
-}
+//   prepareAndRunBenchmark(consider_footprint, motion_model, critics, state);
+// }
 
-static void BM_TwilringCritic(benchmark::State & state)
-{
-  bool consider_footprint = true;
-  std::string motion_model = "DiffDrive";
-  std::vector<std::string> critics = {{"TwirlingCritic"}};
+// static void BM_PathAngleCritic(benchmark::State & state)
+// {
+//   bool consider_footprint = true;
+//   std::string motion_model = "DiffDrive";
+//   std::vector<std::string> critics = {{"PathAngleCritic"}};
 
-  prepareAndRunBenchmark(consider_footprint, motion_model, critics, state);
-}
-
-static void BM_PathFollowCritic(benchmark::State & state)
-{
-  bool consider_footprint = true;
-  std::string motion_model = "DiffDrive";
-  std::vector<std::string> critics = {{"PathFollowCritic"}};
-
-  prepareAndRunBenchmark(consider_footprint, motion_model, critics, state);
-}
-
-static void BM_PathAngleCritic(benchmark::State & state)
-{
-  bool consider_footprint = true;
-  std::string motion_model = "DiffDrive";
-  std::vector<std::string> critics = {{"PathAngleCritic"}};
-
-  prepareAndRunBenchmark(consider_footprint, motion_model, critics, state);
-}
+//   prepareAndRunBenchmark(consider_footprint, motion_model, critics, state);
+// }
 
 BENCHMARK(BM_DiffDrivePointFootprint)->Unit(benchmark::kMillisecond);
 BENCHMARK(BM_DiffDrive)->Unit(benchmark::kMillisecond);
-// BENCHMARK(BM_Omni)->Unit(benchmark::kMillisecond);
-// BENCHMARK(BM_Ackermann)->Unit(benchmark::kMillisecond);
+// // BENCHMARK(BM_Omni)->Unit(benchmark::kMillisecond);
+// // BENCHMARK(BM_Ackermann)->Unit(benchmark::kMillisecond);
 
-BENCHMARK(BM_GoalCritic)->Unit(benchmark::kMillisecond);
-BENCHMARK(BM_GoalAngleCritic)->Unit(benchmark::kMillisecond);
-BENCHMARK(BM_PathAngleCritic)->Unit(benchmark::kMillisecond);
-BENCHMARK(BM_PathFollowCritic)->Unit(benchmark::kMillisecond);
-BENCHMARK(BM_ObstaclesCritic)->Unit(benchmark::kMillisecond);
-BENCHMARK(BM_ObstaclesCriticPointFootprint)->Unit(benchmark::kMillisecond);
-BENCHMARK(BM_TwilringCritic)->Unit(benchmark::kMillisecond);
+// BENCHMARK(BM_GoalCritic)->Unit(benchmark::kMillisecond);
+// BENCHMARK(BM_GoalAngleCritic)->Unit(benchmark::kMillisecond);
+// BENCHMARK(BM_PathAngleCritic)->Unit(benchmark::kMillisecond);
+// BENCHMARK(BM_PathFollowCritic)->Unit(benchmark::kMillisecond);
+// BENCHMARK(BM_ObstaclesCritic)->Unit(benchmark::kMillisecond);
+// BENCHMARK(BM_ObstaclesCriticPointFootprint)->Unit(benchmark::kMillisecond);
+// BENCHMARK(BM_TwilringCritic)->Unit(benchmark::kMillisecond);
 
 BENCHMARK_MAIN();

@@ -36,13 +36,14 @@ struct TestPose
 
 struct TestCostmapSettings
 {
-  const unsigned int cells_x = 40;
-  const unsigned int cells_y = 40;
+  const unsigned int cells_x = 120; // Local Costmap: 6x6 at 5cm resolution = 120x120 cells
+  const unsigned int cells_y = 120;
   const double origin_x = 0.0;
   const double origin_y = 0.0;
-  const double resolution = 0.1;
+  const double resolution = 0.05; // 5cm resolution
   const unsigned char cost_map_default_value = 0;
-  const double footprint_size = 0.15;
+  const double footprint_size = 0.8;
+
 
   std::pair<unsigned int, unsigned int> getCenterIJ()
   {
