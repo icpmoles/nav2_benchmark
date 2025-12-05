@@ -6,8 +6,8 @@ set -e
 
 # $2 must be the "status", for example idle or running
 
-#      same P core /diff P core  / all P cores / 2 E cores / all E cores / 2P2E cores / all Cores 
-cpuset=("2-3"      "3-4"      ) #     "0-7"        "8-9"       "8-11"           "6-9"      "0-11" )
+#      single P core /2 P cores  / all P cores /  1 E core  / 2 E cores / all E cores / 2P2E cores / all Cores 
+cpuset=(                 "3-4"           "0-7"                    "8-9"       "8-11"           "6-9"      "0-11" )
 
 batch_size=("250" "500" "1000" "2000" "4000" "8000" )
 

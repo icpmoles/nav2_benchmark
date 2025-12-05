@@ -49,7 +49,7 @@ void prepareAndRunBenchmark(
   bool consider_footprint, std::string motion_model,
   std::vector<std::string> critics, benchmark::State & state)
 {
-  int batch_size = 4000;
+  int batch_size = 8000;
   int time_steps = 56;
   unsigned int path_points = 50u;
   int iteration_count = 2;

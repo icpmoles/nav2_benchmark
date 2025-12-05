@@ -1,0 +1,1056 @@
+[INFO] [1764951705.347164241] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951705.347635106] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951705.347720230] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951705.350616099] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951705.353816875] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951705.354869415] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951705.354887397] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951705.354968593] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951705.354984050] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951705.354986728] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951705.355208571] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 1
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951705.366661095] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951705.367823592] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951705.367840432] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951705.367876697] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951705.367881813] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951705.367956780] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951705.367980284] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951705.367985865] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951705.368050095] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951705.368054755] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951705.368100629] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951705.368138608] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951705.368141942] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951705.368221929] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951705.368229520] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951705.368236991] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951705.368246228] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951705.372837223] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951705.386130085] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951705.390891342] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951705.391187216] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951705.391264697] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951705.391819372] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951705.391962425] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951705.392073806] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951705.392079547] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951705.392126348] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951705.392131595] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951705.392134134] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951705.392179963] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 1
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951705.396027062] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951705.396457112] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951705.396473123] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951705.396515507] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951705.396521441] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951705.396602317] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951705.396622746] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951705.396639647] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951705.396700297] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951705.396705529] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951705.396761283] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951705.396800874] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951705.396804997] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951705.396894560] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951705.396905317] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951705.396915823] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951705.396921435] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951705.401446115] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951705.485681981] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951705.490057164] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951705.490325321] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951705.490402125] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951705.490975880] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951705.491162223] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951705.491335840] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951705.491344097] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951705.491397598] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951705.491405471] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951705.491408110] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951705.491458425] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 1
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951705.494928976] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951705.495278569] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951705.495290383] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951705.495326258] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951705.495331649] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951705.495400699] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951705.495416837] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951705.495421987] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951705.495473232] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951705.495478680] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951705.495517543] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951705.495551434] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951705.495554530] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951705.495624235] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951705.495631072] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951705.495637364] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951705.495642051] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951705.498730172] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951706.289190951] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951706.296122976] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951706.296431345] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951706.296514335] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951706.297153116] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951706.297295070] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951706.297411664] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951706.297417876] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951706.297467303] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951706.297472944] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951706.297475628] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951706.297524144] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 1
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951706.301188043] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951706.301484107] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951706.301493678] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951706.301528095] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951706.301533291] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951706.301597828] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951706.301616870] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951706.301622127] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951706.301674848] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951706.301678865] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951706.301719928] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951706.301755709] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951706.301758834] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951706.301838014] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951706.301845492] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951706.301851822] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951706.301857006] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951706.305300088] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951707.075423183] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951707.080752056] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951707.081042095] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951707.081124212] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951707.081714222] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951707.081870148] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951707.081999035] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951707.082005510] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951707.082062045] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951707.082068068] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951707.082070813] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951707.082121673] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 1
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951707.085596596] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951707.085878177] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951707.085887348] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951707.085922614] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951707.085928051] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951707.085991970] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951707.086007083] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951707.086012352] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951707.086065193] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951707.086069401] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951707.086110668] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951707.086145289] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951707.086148576] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951707.086221512] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951707.086228664] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951707.086234802] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951707.086239797] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951707.089511131] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951707.845261347] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951707.849958515] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951707.850255067] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951707.850341965] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951707.850975678] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951707.851158855] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951707.851285657] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951707.851297750] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951707.851347538] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951707.851353127] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951707.851355749] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951707.851402565] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 1
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951707.854757386] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951707.855045022] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951707.855055212] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951707.855091259] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951707.855096509] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951707.855160801] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951707.855175839] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951707.855181112] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951707.855233171] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951707.855237308] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951707.855277338] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951707.855309332] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951707.855312215] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951707.855379887] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951707.855386334] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951707.855392298] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951707.855397037] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951707.858557923] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951708.652679780] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951708.657153158] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951708.657419466] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951708.657500179] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951708.658517170] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951708.658811304] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951708.659045660] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951708.659069893] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951708.659217189] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951708.659242049] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951708.659251298] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951708.659369425] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 1
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951708.665404249] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951708.665723033] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951708.665735332] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951708.665768804] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951708.665773649] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951708.665834816] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951708.665851917] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951708.665856585] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951708.665906145] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951708.665909991] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951708.665949328] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951708.665981370] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951708.665984370] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951708.666052066] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951708.666059072] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951708.666064827] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951708.666071636] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951708.669433962] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951709.369854317] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951709.374911825] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951709.375230008] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951709.375313316] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951709.375962052] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951709.376109685] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951709.376233459] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951709.376242353] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951709.376300550] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951709.376308591] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951709.376311390] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951709.376363130] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 1
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951709.379918005] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951709.380236177] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951709.380246896] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951709.380282212] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951709.380287995] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951709.380353826] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951709.380370931] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951709.380376240] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951709.380431437] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951709.380435699] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951709.380477945] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951709.380514313] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951709.380517837] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951709.380588225] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951709.380597486] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951709.380603392] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951709.380608507] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951709.384080940] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951710.087067370] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951710.091529177] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951710.091797306] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951710.091873291] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951710.092421790] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951710.092550181] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951710.092662529] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951710.092668760] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951710.092717167] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951710.092722936] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951710.092725533] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951710.092773778] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 1
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951710.095852193] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951710.096109709] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951710.096118225] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951710.096151330] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951710.096156499] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951710.096215784] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951710.096231345] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951710.096236100] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951710.096284674] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951710.096290202] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951710.096328700] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951710.096360974] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951710.096364178] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951710.096431585] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951710.096438194] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951710.096443883] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951710.096448860] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951710.100123382] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951710.926514082] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951710.930817810] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951710.931169501] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951710.931265296] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951710.931997941] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951710.932259022] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951710.932403607] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951710.932410361] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951710.932460908] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951710.932467718] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951710.932470225] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951710.932517657] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 1
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951710.935861148] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951710.936167909] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951710.936176728] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951710.936210237] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951710.936215398] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951710.936275969] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951710.936295741] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951710.936301029] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951710.936350924] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951710.936354766] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951710.936393991] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951710.936426666] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951710.936429672] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951710.936499641] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951710.936506263] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951710.936512057] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951710.936516583] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951710.939917400] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951711.711309759] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951711.715835570] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951711.716105135] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951711.716179834] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951711.716725977] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951711.716863446] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951711.716978152] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951711.716984394] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951711.717033626] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951711.717038952] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951711.717041467] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951711.717086205] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 1
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951711.720185856] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951711.720442118] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951711.720450801] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951711.720483246] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951711.720488175] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951711.720547456] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951711.720561377] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951711.720566375] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951711.720615555] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951711.720619391] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951711.720658152] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951711.720691061] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951711.720694082] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951711.720761883] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951711.720768333] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951711.720774377] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951711.720779010] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951711.724449014] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951712.435105543] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951712.440690321] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951712.440978509] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951712.441056090] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951712.441663340] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951712.441815173] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951712.441938896] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951712.441952884] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951712.442004174] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951712.442010175] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951712.442012807] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951712.442061630] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 0
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951712.446122443] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951712.446417992] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951712.446429329] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951712.446462583] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951712.446467713] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951712.446528326] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951712.446544726] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951712.446549748] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951712.446598888] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951712.446602717] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951712.446641688] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951712.446674065] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951712.446677065] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951712.446745774] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951712.446752397] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951712.446758173] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951712.446762712] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951712.451464418] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951712.464485980] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951712.470018951] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951712.470359747] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951712.470444718] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951712.471229388] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951712.471400747] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951712.471532119] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951712.471538899] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951712.471591403] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951712.471597731] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951712.471600360] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951712.471650007] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 0
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951712.475278783] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951712.475586687] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951712.475598045] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951712.475630920] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951712.475635912] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951712.475697226] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951712.475808312] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951712.475816151] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951712.475873879] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951712.475877922] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951712.475917592] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951712.475949988] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951712.475953044] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951712.476022658] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951712.476030011] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951712.476036092] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951712.476043977] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951712.479793095] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951712.574769334] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951712.579226158] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951712.579487503] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951712.579562328] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951712.580107678] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951712.580237654] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951712.580343867] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951712.580348985] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951712.580394532] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951712.580399848] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951712.580402383] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951712.580447061] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 0
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951712.583631347] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951712.583894604] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951712.583902954] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951712.583935531] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951712.583940235] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951712.583999830] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951712.584015057] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951712.584020033] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951712.584068166] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951712.584072135] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951712.584110896] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951712.584143198] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951712.584146035] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951712.584213630] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951712.584222005] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951712.584227682] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951712.584232305] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951712.588092179] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951713.285124037] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951713.289947151] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951713.290233846] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951713.290314385] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951713.290895372] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951713.291046149] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951713.291175120] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951713.291180922] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951713.291232652] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951713.291238214] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951713.291240930] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951713.291290780] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 0
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951713.294523159] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951713.294795775] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951713.294805043] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951713.294841069] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951713.294846495] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951713.294909606] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951713.294927765] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951713.294932952] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951713.294986000] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951713.294991534] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951713.295044222] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951713.295090134] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951713.295093738] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951713.295173570] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951713.295181005] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951713.295187065] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951713.295192065] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951713.298869148] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951713.909956760] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951713.915343401] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951713.915719612] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951713.915815354] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951713.916533823] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951713.916714236] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951713.916850941] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951713.916857454] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951713.916912572] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951713.916918663] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951713.916921637] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951713.916975114] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 0
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951713.920263713] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951713.920551144] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951713.920560092] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951713.920595219] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951713.920600473] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951713.920665109] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951713.920683859] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951713.920689062] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951713.920741392] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951713.920745581] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951713.920787755] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951713.920822746] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951713.920825985] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951713.920898751] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951713.920905944] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951713.920912114] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951713.920917102] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951713.924478553] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951714.603218322] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951714.608348772] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951714.608693715] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951714.608791967] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951714.609517415] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951714.609688861] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951714.609822542] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951714.609829735] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951714.609883416] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951714.609889638] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951714.609892361] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951714.609942612] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 0
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951714.613854553] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951714.614186113] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951714.614197208] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951714.614243738] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951714.614249387] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951714.614321759] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951714.614340682] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951714.614346143] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951714.614399524] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951714.614403769] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951714.614446018] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951714.614481997] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951714.614485134] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951714.614562480] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951714.614570025] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951714.614576380] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951714.614581363] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951714.618286682] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951715.253535171] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951715.259037849] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951715.259467888] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951715.259554596] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951715.260296586] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951715.260480792] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951715.260614502] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951715.260630382] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951715.260684549] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951715.260690848] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951715.260693610] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951715.260744581] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 0
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951715.264418278] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951715.264733089] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951715.264743595] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951715.264778223] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951715.264783528] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951715.264848720] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951715.264866475] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951715.264871790] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951715.264924489] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951715.264928620] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951715.264971039] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951715.265006275] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951715.265009478] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951715.265082818] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951715.265090007] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951715.265096311] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951715.265101503] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951715.268782952] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951715.898147194] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951715.902916478] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951715.903264083] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951715.903352790] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951715.904046982] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951715.904202297] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951715.904325133] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951715.904331270] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951715.904382411] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951715.904388512] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951715.904391209] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951715.904440783] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 0
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951715.908621257] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951715.909196272] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951715.909224540] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951715.909330886] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951715.909352182] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951715.909558616] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951715.909602459] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951715.909618727] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951715.909785236] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951715.909804176] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951715.909929257] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951715.910036062] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951715.910051916] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951715.910271100] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951715.910297723] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951715.910314526] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951715.910338123] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951715.914346824] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951716.532677403] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951716.537820787] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951716.538117521] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951716.538198063] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951716.538812110] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951716.538955809] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951716.539094625] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951716.539102413] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951716.539159974] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951716.539172710] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951716.539175189] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951716.539221304] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 0
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951716.542709238] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951716.543086734] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951716.543101630] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951716.543138113] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951716.543143959] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951716.543232070] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951716.543252678] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951716.543258175] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951716.543313480] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951716.543317680] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951716.543361156] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951716.543396608] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951716.543399877] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951716.543474096] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951716.543484436] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951716.543490539] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951716.543495680] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951716.547134020] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951717.264560415] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951717.269837089] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951717.270201041] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951717.270286572] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951717.271065120] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951717.271254927] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951717.271383534] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951717.271389873] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951717.271439092] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951717.271445535] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951717.271448009] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951717.271495599] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 0
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951717.274613205] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951717.274929647] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951717.274939659] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951717.274976578] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951717.274981999] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951717.275063084] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951717.275085478] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951717.275090898] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951717.275148858] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951717.275153304] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951717.275196046] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951717.275231130] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951717.275234532] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951717.275308833] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951717.275316986] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951717.275323716] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951717.275328728] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951717.279202595] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951717.994008612] [cost_map_node.cost_map_node]: Destroying
+[INFO] [1764951717.998414379] [cost_map_node.cost_map_node]: 
+	cost_map_node lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1764951717.998740935] [cost_map_node.cost_map_node]: Creating Costmap
+[INFO] [1764951717.998832820] [cost_map_node.cost_map_node]: Configuring
+[INFO] [1764951717.999472469] [cost_map_node.cost_map_node]: Using plugin "static_layer"
+[INFO] [1764951717.999608062] [cost_map_node.cost_map_node]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1764951717.999720818] [cost_map_node.cost_map_node]: Initialized plugin "static_layer"
+[INFO] [1764951717.999726568] [cost_map_node.cost_map_node]: Using plugin "obstacle_layer"
+[INFO] [1764951717.999774717] [cost_map_node.cost_map_node]: Subscribed to Topics: 
+[INFO] [1764951717.999780218] [cost_map_node.cost_map_node]: Initialized plugin "obstacle_layer"
+[INFO] [1764951717.999782798] [cost_map_node.cost_map_node]: Using plugin "inflation_layer"
+[INFO] [1764951717.999830047] [cost_map_node.cost_map_node]: Initialized plugin "inflation_layer"
+
+
+--------------------OPTIMIZER OPTIONS-----------------------------
+Critics: GoalCritic GoalAngleCritic ObstaclesCritic PathAngleCritic PathFollowCritic PreferForwardCritic CostCritic 
+Motion model: DiffDrive
+Consider footprint: 0
+Iterations: 2
+Batch size: 2000
+Time steps: 56
+Path points: 50
+
+-------------------------------------------------------------------
+
+[WARN] [1764951718.003063595] [dummy]: Controller period is less then model dt, consider setting it equal
+[INFO] [1764951718.003496877] [dummy]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951718.003510384] [dummy]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1764951718.003546992] [dummy]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[INFO] [1764951718.003552440] [dummy]: Critic loaded : mppi::critics::GoalAngleCritic
+[ERROR] [1764951718.003617331] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951718.003643127] [dummy]: ObstaclesCritic instantiated with 1 power and 20.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951718.003650208] [dummy]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1764951718.003712000] [dummy]: PathAngleCritic instantiated with 1 power and 2.200000 weight. Mode set to: Forward Preference
+[INFO] [1764951718.003716518] [dummy]: Critic loaded : mppi::critics::PathAngleCritic
+[INFO] [1764951718.003758353] [dummy]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1764951718.003792773] [dummy]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[INFO] [1764951718.003795902] [dummy]: Critic loaded : mppi::critics::PreferForwardCritic
+[ERROR] [1764951718.003869727] [computeCircumscribedCost]: The inflation radius (0.550000) is smaller than the circumscribed radius (1.145513) If this is an SE2-collision checking plugin, it cannot use costmap potential field to speed up collision checking by only checking the full footprint when robot is within possibly-inscribed radius of an obstacle. This may significantly slow down planning times!
+[ERROR] [1764951718.003877610] [dummy]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[INFO] [1764951718.003883992] [dummy]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on circular cost.
+[INFO] [1764951718.003889128] [dummy]: Critic loaded : mppi::critics::CostCritic
+[INFO] [1764951718.007580312] [dummy]: Optimizer reset
+Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+         at line 127 in ./src/class_loader.cpp
+[INFO] [1764951718.630094570] [cost_map_node.cost_map_node]: Destroying
