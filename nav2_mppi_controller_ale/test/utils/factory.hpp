@@ -115,7 +115,7 @@ std::shared_ptr<nav2_costmap_2d::Costmap2D> getDummyCostmap(TestCostmapSettings 
 
 std::vector<geometry_msgs::msg::Point> getDummySquareFootprint(double a)
 {
-  return {getDummyPoint(a, a), getDummyPoint(-a, -a), getDummyPoint(a, -a), getDummyPoint(-a, a)};
+  return {getDummyPoint(a, a), getDummyPoint(a, -a), getDummyPoint(-a, -a), getDummyPoint(-a, a)};
 }
 
 std::shared_ptr<nav2_costmap_2d::Costmap2DROS> getDummyCostmapRos(TestCostmapSettings s)
