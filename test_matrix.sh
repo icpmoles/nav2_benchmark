@@ -18,9 +18,10 @@ latency_opt=(1 0)
 optimize_cpu() {
     if [  $1 -eq 1 ]; then
     echo "optimize"
-    ( echo -n 0 ; cat ) > /dev/cpu_dma_latency
+    (( echo -n 0 ; cat ) > /dev/cpu_dma_latency) & (xxd /dev/cpu_dma_latency)
     else 
     echo "not optimize"
+    (xxd /dev/cpu_dma_latency)
     fi
 }
 

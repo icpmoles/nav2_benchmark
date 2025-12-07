@@ -103,8 +103,9 @@ static void BM_DiffDrivePointFootprint(benchmark::State & state)
 {
   bool consider_footprint = true;
   std::string motion_model = "DiffDrive";
-  std::vector<std::string> critics = {{"GoalCritic"}, {"GoalAngleCritic"}, {"ObstaclesCritic"},
-    {"PathAngleCritic"}, {"PathFollowCritic"}, {"PreferForwardCritic"},{"CostCritic"}};
+  std::vector<std::string> critics = {{"ConstraintCritic"}, {"CostCritic"}, {"GoalCritic"},
+    {"GoalAngleCritic"}, {"PathAlignCritic"}, {"PathFollowCritic"}, {"PathAngleCritic"},
+    {"PreferForwardCritic"}};
 
   prepareAndRunBenchmark(consider_footprint, motion_model, critics, state);
 }
@@ -113,11 +114,12 @@ static void BM_DiffDrive(benchmark::State & state)
 {
   bool consider_footprint = false;
   std::string motion_model = "DiffDrive";
-  std::vector<std::string> critics = {{"GoalCritic"}, {"GoalAngleCritic"}, {"ObstaclesCritic"},
-    {"PathAngleCritic"}, {"PathFollowCritic"}, {"PreferForwardCritic"},{"CostCritic"}};
+  std::vector<std::string> critics = {{"ConstraintCritic"}, {"CostCritic"}, {"GoalCritic"},
+    {"GoalAngleCritic"}, {"PathAlignCritic"}, {"PathFollowCritic"}, {"PathAngleCritic"},
+    {"PreferForwardCritic"}};
+
   prepareAndRunBenchmark(consider_footprint, motion_model, critics, state);
 }
-
 
 // static void BM_Omni(benchmark::State & state)
 // {
