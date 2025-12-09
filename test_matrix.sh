@@ -13,12 +13,15 @@ batch_size=("250" "500" "1000" "2000" "4000" "8000" )
 
 tunedby=("steve" "ale")
 
-latency_opt=(1 0)
+latency_opt=(1)
 
 optimize_cpu() {
     if [  $1 -eq 1 ]; then
     echo "optimize"
-    (( echo -n 0 ; cat ) > /dev/cpu_dma_latency) & (xxd /dev/cpu_dma_latency)
+    
+    (( echo -n 0 ; cat ) > /dev/cpu_dma_latency) & (xxd /dev/cpu_dma_latency) & wait
+    echo "done opt"
+    (xxd /dev/cpu_dma_latency)
     else 
     echo "not optimize"
     (xxd /dev/cpu_dma_latency)
@@ -40,8 +43,13 @@ for author in ${tunedby[@]}; do
         # replace batch size variable
         sed -i  "s/N_BATCH/$bs/g" nav2_mppi_controller/benchmark/optimizer_benchmark.cpp
         docker compose build
-        optimize_cpu $opt & \
-        sudo -u $1 docker run --rm  --cpuset-cpus "$cpu"  --name "dummy" -v $PWD/results_$2/auth_$author/bs_$bs/opt_$opt/cpu_$cpu:/root/nav2_ws/output  nav2_mppi_benchmark
+        (( echo -n 0 ; cat ) > /dev/cpu_dma_latency) & \
+        sudo -u $1 docker run --rm \
+         --cpuset-cpus "$cpu"  \
+         --name "dummy" \
+         -v $PWD/results_$2/auth_$author/bs_$bs/opt_$opt/cpu_$cpu:/root/nav2_ws/output  \
+         nav2_mppi_benchmark & \
+        wait
       done 
     done
   done
